@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 import { Container } from './styles';
 
 const DefaultLayout = ({ children, pageTitle, ...props }) => {
@@ -9,9 +12,9 @@ const DefaultLayout = ({ children, pageTitle, ...props }) => {
         <title>{pageTitle}</title>
       </Head>
 
+      <Header />
       <main>{children}</main>
-
-      <footer>Footer...</footer>
+      <Footer />
     </Container>
   );
 };
