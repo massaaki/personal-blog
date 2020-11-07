@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Container } from './styles';
 
-const layout = ({ children, pageTitle, ...props }) => {
+const DefaultLayout = ({ children, pageTitle, ...props }) => {
   return (
     <Container>
       <Head>
@@ -16,4 +16,4 @@ const layout = ({ children, pageTitle, ...props }) => {
   );
 };
 
-export default layout;
+export default DefaultLayout;
