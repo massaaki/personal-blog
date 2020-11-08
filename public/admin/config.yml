@@ -14,4 +14,5 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Author', name: 'author', widget: 'string' }
+          - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: true }
