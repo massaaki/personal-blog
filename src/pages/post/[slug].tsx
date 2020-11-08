@@ -36,9 +36,9 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
 };
 
 export async function getStaticProps({ ...ctx }) {
-  const { postname } = ctx.params;
+  const { slug } = ctx.params;
 
-  const content = await import(`../../posts/${postname}.md`);
+  const content = await import(`../../posts/${slug}.md`);
   const data = matter(content.default);
 
   return {
