@@ -2,12 +2,10 @@ import Link from 'next/link';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import DefaultLayout from 'shared/layout/DefaultLayout';
+import IFrontMatter from 'models/interfaces/IFrontmatter';
 
 interface IRequest {
-  frontmatter: {
-    title: string;
-    author: string;
-  };
+  frontmatter: IFrontMatter;
   markdownBody: string;
 }
 
@@ -27,6 +25,7 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
       <article>
         <h1>{frontmatter.title}</h1>
         <p>by {frontmatter.author}</p>
+        {frontmatter.thumbnail && <img src={frontmatter.thumbnail} alt="" />}
 
         <div>
           <ReactMarkdown source={markdownBody} />
