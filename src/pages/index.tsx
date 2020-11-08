@@ -1,10 +1,8 @@
 import matter from 'gray-matter';
 
-import DefaultLayout from '../shared/layout/DefaultLayout';
-import PostsList from '../shared/components/PostsList';
-import { type } from 'os';
-import IPost from '../models/interfaces/IPost';
-
+import DefaultLayout from 'shared/layout/DefaultLayout';
+import PostsList from 'shared/components/PostsList';
+import IPost from 'models/interfaces/IPost';
 interface IValue {
   default: string;
 }
