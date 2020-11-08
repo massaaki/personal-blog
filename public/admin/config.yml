@@ -7,8 +7,8 @@ public_folder: img
 collections:
   - name: 'post'
     label: 'Post'
-    folder: 'posts'
-    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    folder: 'src/posts'
+    slug: '{{slug}}'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
