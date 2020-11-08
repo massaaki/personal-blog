@@ -1,6 +1,7 @@
 ---
 title: Title Here
 author: Author here
+thumbnail: /img/thumbtest.png
 ---
 ## Some title here
 
