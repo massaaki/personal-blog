@@ -1,18 +1,29 @@
 import Link from 'next/link';
 
+import { Content } from './styles';
+
 const Header = () => {
   return (
     <>
-      <header className="header">
+      <Content>
+        <Link href="/">
+          <a>LOGO</a>
+        </Link>
         <nav className="nav">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
+          <ul>
+            <li>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a>About me</a>
+              </Link>
+            </li>
+          </ul>
         </nav>
-      </header>
+      </Content>
     </>
   );
 };
