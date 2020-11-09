@@ -8,8 +8,16 @@ export default createGlobalStyle`
   }
 
   body {
+  @font-face {
+    font-family: 'Montserrat';
+    src:
+      url('../assets/fonts/Montserrat/Montserrat-Medium.ttf')
+      format('truetype');
+  }
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-    font: 400 16px Roboto, sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+    text-rendering: optimizeLegibility;
   }
 `;
