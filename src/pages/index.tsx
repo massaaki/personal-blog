@@ -4,7 +4,9 @@ import DefaultLayout from 'shared/layout/DefaultLayout';
 import PostsList from 'shared/components/PostsList';
 import IPost from 'models/interfaces/IPost';
 
-import { Content, Home, Description } from './styles';
+import HeaderSection from 'shared/components/HeaderSection';
+
+//import { Content, Home, Description } from './styles';
 
 interface IValue {
   default: string;
@@ -17,16 +19,12 @@ interface IRequest {
 const HomePage = ({ posts }: IRequest) => {
   return (
     <DefaultLayout pageTitle="Boilerplate - ReactJs + Next">
-      <Content>
-        <Home>
-          <p>Hello, I'm</p>
-          <h1>Maurício Massaaki</h1>
-          <Description>Entrepeneur & passionate developer</Description>
-        </Home>
+      <div className="container">
+        <HeaderSection />
         <main>
           <PostsList posts={posts} />
         </main>
-      </Content>
+      </div>
     </DefaultLayout>
   );
 };
