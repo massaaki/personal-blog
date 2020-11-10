@@ -1,12 +1,14 @@
 import { Header, Content, Description } from './styles';
 
-const HeaderSection = () => {
+import IHeader from 'models/interfaces/IHeader';
+
+const HeaderSection = ({ topText, mainText, bottomText }: IHeader) => {
   return (
     <Header>
       <Content>
-        <p>Hello, I'm</p>
-        <h1>Maurício Massaaki</h1>
-        <Description>Entrepeneur & passionate developer</Description>
+        <p>{topText}</p>
+        <h1>{mainText}</h1>
+        <Description>{bottomText}</Description>
       </Content>
     </Header>
   );
