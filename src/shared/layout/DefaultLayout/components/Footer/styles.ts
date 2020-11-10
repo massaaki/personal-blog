@@ -6,11 +6,11 @@ export const Footer = styled.footer`
     rgb(106, 152, 240) 0%,
     rgb(73, 97, 220) 99%
   );
+
+  margin-top: 30px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  height: 60px;
-  color: #fff;
+  min-height: 60px;
+  color: ${props => props.theme.colors.light.footerText};
 
   display: flex;
   align-items: center;
