@@ -6,10 +6,5 @@ module.exports = {
       use: 'raw-loader',
     })
     return config
-  },
+    },
 }
-
-// const withImages = require('next-images');
-// module.exports = withImages({
-//   esModule: true,
-// })

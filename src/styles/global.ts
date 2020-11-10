@@ -9,7 +9,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body, h1, h2, h3, h4, h5, h6, p,
+  body, h1, h2, h3, h4, h5, h6, p, main,
   a, nav{
     margin: 0;
     padding: 0;
@@ -29,29 +29,16 @@ export default createGlobalStyle`
 
   /* GLOBAL */
   a {
-    color: ${props => props.theme.colors.dark.text};
+    color: ${props => props.theme.colors.light.text};
     transition: color 0.2s;
     &:hover {
-      color: #fff;
+      color: ${props => props.theme.colors.light.textHover};
     }
   }
 
   body {
-  @font-face {
-    font-family: 'Montserrat';
-    src:
-      url('../assets/fonts/Montserrat/Montserrat-Medium.ttf')
-      format('truetype');
-  }
-    background: ${props => props.theme.colors.dark.background};
-    color: ${props => props.theme.colors.dark.text};
-
-    font-family: 'Montserrat', sans-serif;
-    color: ${props => props.theme.colors.dark.text};
+    background: ${props => props.theme.colors.light.background};
+    color: ${props => props.theme.colors.light.text};
     text-rendering: optimizeLegibility;
   }
-
-
-
-
 `;

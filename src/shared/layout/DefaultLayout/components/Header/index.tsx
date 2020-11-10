@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-import { Content } from './styles';
+import { Menu, Content } from './styles';
 
 const Header = () => {
   return (
-    <>
+    <Menu>
       <Content>
         <Link href="/">
           <a>LOGO</a>
@@ -24,7 +24,7 @@ const Header = () => {
           </ul>
         </nav>
       </Content>
-    </>
+    </Menu>
   );
 };
 

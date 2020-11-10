@@ -3,6 +3,9 @@ import matter from 'gray-matter';
 import DefaultLayout from 'shared/layout/DefaultLayout';
 import PostsList from 'shared/components/PostsList';
 import IPost from 'models/interfaces/IPost';
+
+import { Content, Home, Description } from './styles';
+
 interface IValue {
   default: string;
 }
@@ -11,17 +14,19 @@ interface IRequest {
   posts: IPost[];
 }
 
-const Home = ({ posts }: IRequest) => {
+const HomePage = ({ posts }: IRequest) => {
   return (
     <DefaultLayout pageTitle="Boilerplate - ReactJs + Next">
-      <div className="content">
-        <h1>Boilerplate</h1>
-        <h2>React.js + Next.js</h2>
-
+      <Content>
+        <Home>
+          <p>Hello, I'm</p>
+          <h1>Maurício Massaaki</h1>
+          <Description>Entrepeneur & passionate developer</Description>
+        </Home>
         <main>
           <PostsList posts={posts} />
         </main>
-      </div>
+      </Content>
     </DefaultLayout>
   );
 };
@@ -54,4 +59,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Home;
+export default HomePage;

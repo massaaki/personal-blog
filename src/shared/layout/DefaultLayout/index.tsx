@@ -13,7 +13,7 @@ const DefaultLayout = ({ children, pageTitle, ...props }) => {
       </Head>
 
       <Header />
-      <main>{children}</main>
+      {children}
       <Footer />
     </Container>
   );
