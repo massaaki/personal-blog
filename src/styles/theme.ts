@@ -6,13 +6,15 @@ const theme = {
       navBackground: 'rgb(35,35,35)',
       background: 'rgb(25, 25, 25)',
       text: '#e1e1e1',
-      textHover: '#fff'
+      textHover: '#fff',
+      footerText: '#fff'
     },
     light: {
       navBackground: '#fff',
       background: '#fff',
       text: '#222',
-      textHover: '#555'
+      textHover: '#555',
+      footerText: '#fff'
     }
   },
   fonts: {
