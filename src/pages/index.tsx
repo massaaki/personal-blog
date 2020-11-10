@@ -18,7 +18,7 @@ interface IRequest {
 
 const HomePage = ({ posts }: IRequest) => {
   return (
-    <DefaultLayout pageTitle="Boilerplate - ReactJs + Next">
+    <DefaultLayout pageTitle="Mauricio Massaaki - Entrepeneur & Passionate Developer">
       <div className="container">
         <HeaderSection />
         <main>
