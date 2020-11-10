@@ -16,8 +16,8 @@ export const Content = styled.div`
     margin-left: 4px;
   }
   h1 {
-    font-size: 41px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 7px;
   }

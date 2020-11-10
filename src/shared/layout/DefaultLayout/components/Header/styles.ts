@@ -14,9 +14,7 @@ export const Menu = styled.header`
 
 export const Content = styled.div`
   display: flex;
-  max-width: 1600px;
-  margin: 0 30px;
-  width: 100%;
+  width: 80%;
   align-items: center;
   justify-content: space-around;
   height: 60px;
