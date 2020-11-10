@@ -4,11 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 60px;
   height: 100vh;
   width: 100%;
 
-  .content {
-    text-align: center;
-  }
+  font-family: 'Montserrat', sans-serif;
 `;

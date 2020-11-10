@@ -1,9 +1,11 @@
-const Footer = () => {
+import { Footer } from './styles';
+
+const FooterComponent = () => {
   return (
     <>
-      <footer className="footer">Footer</footer>
+      <Footer>Made with ♡ and Next.JS</Footer>
     </>
   );
 };
 
-export default Footer;
+export default FooterComponent;
