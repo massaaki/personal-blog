@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
+export const Header = styled.section`
   width: 100%;
-  max-width: 1600px;
-  margin: 0 30px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const Content = styled.div`
   p {
     font-size: 15px;
     font-weight: lighter;
@@ -16,14 +21,6 @@ export const Content = styled.div`
     text-transform: uppercase;
     margin-bottom: 7px;
   }
-`;
-
-export const Home = styled.section`
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 `;
 
 export const Description = styled.p`

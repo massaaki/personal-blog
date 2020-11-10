@@ -9,4 +9,10 @@ export const Container = styled.div`
   width: 100%;
 
   font-family: 'Montserrat', sans-serif;
+
+  .container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 30px;
+  }
 `;
