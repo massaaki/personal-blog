@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Menu = styled.header`
+  z-index: 3;
   display: flex;
   justify-content: center;
   position: fixed;

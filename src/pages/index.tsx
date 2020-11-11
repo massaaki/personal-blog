@@ -20,7 +20,11 @@ const HomePage = ({ posts }: IRequest) => {
   return (
     <DefaultLayout pageTitle="Mauricio Massaaki - Entrepeneur & Passionate Developer">
       <div className="container">
-        <HeaderSection mainText="Hello world" bottomText="welcome to learn" />
+        <HeaderSection
+          topText="Hello world,"
+          mainText="Welcome to learn"
+          bottomText="Things that can make your <code/> better"
+        />
         <main>
           <PostsList posts={posts} />
         </main>

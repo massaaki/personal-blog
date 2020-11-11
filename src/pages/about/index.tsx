@@ -10,7 +10,6 @@ const aboutPage = () => {
           mainText="Maurício Massaaki"
           bottomText="Entrepeneur and passionate developer"
         />
-        <h1>About page</h1>
       </div>
     </DefaultLayout>
   );
