@@ -2,8 +2,7 @@ import Link from 'next/link';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import DefaultLayout from 'shared/layout/DefaultLayout';
-import { PostContent, Article, Title, Author } from './styles';
-import Headersection from 'shared/components/HeaderSection';
+import { PostContent, Article, Title, Author, ArticleHeader } from './styles';
 
 interface IRequest {
   frontmatter: {
@@ -24,11 +23,13 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
     <DefaultLayout pageTitle={frontmatter.title}>
       <div className="main">
         <Article>
-          <Title>{frontmatter.title}</Title>
-          <Author>{frontmatter.author}</Author>
-          <Link href="/">
-            <a>Voltar</a>
-          </Link>
+          <ArticleHeader>
+            <Title>{frontmatter.title}</Title>
+            <Author>{frontmatter.author}</Author>
+            <Link href="/">
+              <a>Voltar</a>
+            </Link>
+          </ArticleHeader>
 
           <PostContent>
             <ReactMarkdown source={markdownBody} />

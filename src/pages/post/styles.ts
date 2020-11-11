@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-export const Article = styled.article`
+export const ArticleHeader = styled.div`
+  height: 40vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 0;
-  min-height: 100vh;
+  justify-content: center;
 
   > a {
     font-size: 15px;
@@ -15,6 +16,11 @@ export const Article = styled.article`
     padding: 5px 15px;
     margin: 10px 0;
   }
+`;
+
+export const Article = styled.article`
+  margin: 30px 0;
+  min-height: 100vh;
 `;
 
 export const Title = styled.h1`
