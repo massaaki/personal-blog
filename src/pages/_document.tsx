@@ -44,7 +44,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
             rel="stylesheet"
           />
-          {/* <link rel="icon" href="" /> */}
+          <link rel="icon" href="/img/favicon.png" type="image/png" />
+          <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
         </Head>
         <body>
           <Main />
