@@ -5,11 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-  height: 100vh;
   width: 100%;
 
   font-family: 'Montserrat', sans-serif;
-  .container {
+  .main {
     width: 80%;
     min-height: 100vh;
   }

@@ -5,7 +5,7 @@ import BackgroundAbstract from 'shared/icons/BackgroundAbstract';
 const HeaderSection = ({ topText, mainText, bottomText }: IHeader) => {
   return (
     <Header>
-      <BackgroundAbstract />
+      {/* <BackgroundAbstract /> */}
       <Content>
         <p>{topText}</p>
         <h1>{mainText}</h1>

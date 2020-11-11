@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 export const Header = styled.section`
   position: relative;
-  width: 100%;
   height: 50vh;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   svg {
     z-index: 0;
     position: absolute;
@@ -17,6 +15,10 @@ export const Header = styled.section`
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   z-index: 1;
   p {
     font-size: 15px;

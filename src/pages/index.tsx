@@ -19,7 +19,7 @@ interface IRequest {
 const HomePage = ({ posts }: IRequest) => {
   return (
     <DefaultLayout pageTitle="Mauricio Massaaki - Entrepeneur & Passionate Developer">
-      <div className="container">
+      <div className="main">
         <HeaderSection
           topText="Hello world,"
           mainText="Welcome to learn"

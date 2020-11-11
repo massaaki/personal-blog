@@ -4,7 +4,7 @@ import HeaderSection from 'shared/components/HeaderSection';
 const aboutPage = () => {
   return (
     <DefaultLayout pageTitle="About page">
-      <div className="container">
+      <div className="main">
         <HeaderSection
           topText="Hello, I'm"
           mainText="Maurício Massaaki"
