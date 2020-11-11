@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import PortfolioLogo from 'shared/icons/PortfolioLogo';
 import { Menu, Content } from './styles';
 
 const Header = () => {
@@ -7,7 +8,9 @@ const Header = () => {
     <Menu>
       <Content>
         <Link href="/">
-          <a>LOGO</a>
+          <a>
+            <PortfolioLogo />
+          </a>
         </Link>
         <nav className="nav">
           <ul>
