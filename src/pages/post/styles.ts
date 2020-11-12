@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const ArticleHeader = styled.div`
-  height: 40vh;
-
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-
   > a {
+    text-align: center;
+    max-width: 80px;
     font-size: 15px;
     background: ${props => props.theme.colors.light.footerBackground};
     color: ${props => props.theme.colors.light.footerText};
@@ -18,15 +17,22 @@ export const ArticleHeader = styled.div`
   }
 `;
 
+export const Post = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 30px 0;
+`;
+
 export const Article = styled.article`
   margin: 30px 0;
   min-height: 100vh;
 `;
 
 export const Title = styled.h1`
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 35px;
+  font-weight: bold;
 `;
+
 export const Author = styled.p`
   font-size: 15px;
 `;
@@ -34,21 +40,18 @@ export const Author = styled.p`
 export const PostContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   img {
-    max-width: 600px;
     width: 100%;
   }
   h2 {
     margin: 10px 0;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
   }
   p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: justify;
     max-width: 780px;
     img {
       margin: 10px;
