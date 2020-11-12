@@ -66,6 +66,7 @@ export const PostContent = styled.div`
 
   img {
     width: 100%;
+    max-width: 840px;
   }
   h2 {
     margin: 10px 0;
@@ -136,5 +137,3 @@ export const Tags = styled.div`
     }
   }
 `;
-
-export default ArticleHeader;
