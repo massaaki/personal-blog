@@ -28,6 +28,20 @@ export const Article = styled.article`
   min-height: 100vh;
 `;
 
+export const PublicationInformation = styled.div`
+  ul {
+    display: inline-flex;
+    margin-bottom: 5px;
+    li {
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+      font-size: 14px;
+      color: #888;
+    }
+  }
+`;
+
 export const Title = styled.h1`
   font-size: 35px;
   font-weight: bold;

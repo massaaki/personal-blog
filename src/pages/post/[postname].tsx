@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+
+import { FaCalendarAlt, FaRegClock } from 'react-icons/fa';
+
 import DefaultLayout from 'shared/layout/DefaultLayout';
 import {
   Post,
@@ -8,7 +11,8 @@ import {
   Article,
   Title,
   Author,
-  ArticleHeader
+  ArticleHeader,
+  PublicationInformation
 } from './styles';
 
 interface IRequest {
@@ -32,6 +36,18 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
         <Post>
           <Article>
             <ArticleHeader>
+              <PublicationInformation>
+                <ul>
+                  <li>
+                    {' '}
+                    <FaCalendarAlt /> 22/08/2020
+                  </li>
+                  <li>
+                    {' '}
+                    <FaRegClock /> 15min to read
+                  </li>
+                </ul>
+              </PublicationInformation>
               <Title>{frontmatter.title}</Title>
               <Author>{frontmatter.author}</Author>
               <Link href="/">
