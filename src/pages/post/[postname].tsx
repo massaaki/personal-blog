@@ -3,7 +3,8 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
 import { FaCalendarAlt, FaRegClock } from 'react-icons/fa';
-
+import { SiFirebase, SiReact, SiHtml5, SiCss3 } from 'react-icons/si';
+import { BsCode } from 'react-icons/bs';
 import DefaultLayout from 'shared/layout/DefaultLayout';
 import {
   Post,
@@ -12,7 +13,10 @@ import {
   Title,
   Author,
   ArticleHeader,
-  PublicationInformation
+  PublicationInformation,
+  PostInfo,
+  Tags,
+  DevLevel
 } from './styles';
 
 interface IRequest {
@@ -43,7 +47,6 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
                     <FaCalendarAlt /> 22/08/2020
                   </li>
                   <li>
-                    {' '}
                     <FaRegClock /> 15min to read
                   </li>
                 </ul>
@@ -59,7 +62,30 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
               <ReactMarkdown source={markdownBody} />
             </PostContent>
           </Article>
-          <div className="postInfo">Post Informations</div>
+          <PostInfo>
+            <DevLevel>
+              Complexidade:&nbsp;
+              <span>Fácil</span>
+            </DevLevel>
+
+            <Tags>
+              <h3>Stacks</h3>
+              <ul>
+                <li>
+                  <SiReact />
+                </li>
+                <li>
+                  <SiHtml5 />
+                </li>
+                <li>
+                  <SiCss3 />
+                </li>
+                <li>
+                  <SiFirebase />
+                </li>
+              </ul>
+            </Tags>
+          </PostInfo>
         </Post>
       </div>
     </DefaultLayout>
