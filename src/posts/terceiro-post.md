@@ -1,6 +1,7 @@
 ---
 title: Terceiro post
 author: AuthorTeste
-thumbnail: /img/thumbtest.png
+thumbnail: /img/publications/thumbtest.png
 ---
+
 Hello world
