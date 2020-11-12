@@ -9,7 +9,7 @@ collections:
     files:
       - label: 'Home'
         name: 'home'
-        file: 'src/contents/posts/home.md'
+        file: 'src/contents/pages/home.md'
         fields:
           - { label: 'Page title', name: 'pageTitle', widget: 'string' }
           - { label: 'Top text', name: 'topText', widget: 'string' }
