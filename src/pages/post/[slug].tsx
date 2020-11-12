@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { FaCalendarAlt, FaRegClock } from 'react-icons/fa';
 import { SiFirebase, SiReact, SiHtml5, SiCss3 } from 'react-icons/si';
 import DefaultLayout from 'shared/layout/DefaultLayout';
+
 import {
   Post,
   PostContent,
@@ -17,6 +18,7 @@ import {
   Tags,
   DevLevel
 } from './styles';
+
 import IFrontMatter from 'models/interfaces/IFrontmatter';
 
 interface IRequest {

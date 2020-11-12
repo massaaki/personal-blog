@@ -5,6 +5,7 @@ import { List, ThumbFake } from './styles';
 interface IRequest {
   posts?: IPost[];
 }
+
 const PostList = ({ posts }: IRequest) => {
   return (
     <div>

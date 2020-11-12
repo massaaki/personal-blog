@@ -6,8 +6,6 @@ import IPost from 'models/interfaces/IPost';
 
 import HeaderSection from 'shared/components/HeaderSection';
 
-//import { Content, Home, Description } from './styles';
-
 interface IValue {
   default: string;
 }

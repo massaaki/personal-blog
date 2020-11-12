@@ -136,3 +136,5 @@ export const Tags = styled.div`
     }
   }
 `;
+
+export default ArticleHeader;
