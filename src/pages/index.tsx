@@ -6,22 +6,26 @@ import IPost from 'models/interfaces/IPost';
 
 import HeaderSection from 'shared/components/HeaderSection';
 
-interface IValue {
-  default: string;
+interface IHomeData {
+  pageTitle: string;
+  topText: string;
+  mainText: string;
+  bottomText: string;
 }
 
 interface IRequest {
   posts: IPost[];
+  homeData: IHomeData;
 }
 
-const HomePage = ({ posts }: IRequest) => {
+const HomePage = ({ posts, homeData }: IRequest) => {
   return (
-    <DefaultLayout pageTitle="Mauricio Massaaki - Entrepeneur & Passionate Developer">
+    <DefaultLayout pageTitle={homeData?.pageTitle}>
       <div className="main">
         <HeaderSection
-          topText="Hello world,"
-          mainText="Welcome to learn"
-          bottomText="Things that can make your <code/> better"
+          topText={homeData?.topText}
+          mainText={homeData?.mainText}
+          bottomText={homeData?.bottomText}
         />
         <main>
           <PostsList posts={posts} />
@@ -50,8 +54,12 @@ export async function getStaticProps() {
     return data;
   })(require.context('../posts', true, /\.md$/));
 
+  const homeMd = await import('contents/pages/home.md');
+  const { data: homeData } = matter(homeMd.default);
+
   return {
     props: {
+      homeData,
       posts
     }
   };
