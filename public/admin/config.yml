@@ -2,7 +2,7 @@ backend:
   # name: test-repo
   name: git-gateway
   branch: main
-media_folder: public/img
+media_folder: public/img/publications
 collections:
   - name: 'home'
     label: 'Home'
@@ -11,9 +11,10 @@ collections:
         name: 'home'
         file: 'src/contents/posts/home.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Author', name: 'author', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+          - { label: 'Page title', name: 'pageTitle', widget: 'string' }
+          - { label: 'Top text', name: 'topText', widget: 'string' }
+          - { label: 'Main text', name: 'mainText', widget: 'string' }
+          - { label: 'Bottom text', name: 'bottomText', widget: 'string' }
 
   - name: 'post'
     label: 'Post'
