@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 
 import { FaCalendarAlt, FaRegClock } from 'react-icons/fa';
 import { SiFirebase, SiReact, SiHtml5, SiCss3 } from 'react-icons/si';
-import { BsCode } from 'react-icons/bs';
 import DefaultLayout from 'shared/layout/DefaultLayout';
 import {
   Post,
@@ -18,12 +17,10 @@ import {
   Tags,
   DevLevel
 } from './styles';
+import IFrontMatter from 'models/interfaces/IFrontmatter';
 
 interface IRequest {
-  frontmatter: {
-    title: string;
-    author: string;
-  };
+  frontmatter: IFrontMatter;
   markdownBody: string;
 }
 
@@ -43,7 +40,6 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
               <PublicationInformation>
                 <ul>
                   <li>
-                    {' '}
                     <FaCalendarAlt /> 22/08/2020
                   </li>
                   <li>
@@ -57,11 +53,11 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
                 <a>Voltar</a>
               </Link>
             </ArticleHeader>
-
             <PostContent>
               <ReactMarkdown source={markdownBody} />
             </PostContent>
           </Article>
+
           <PostInfo>
             <DevLevel>
               Complexidade:&nbsp;
@@ -93,9 +89,9 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
 };
 
 export async function getStaticProps({ ...ctx }) {
-  const { postname } = ctx.params;
+  const { slug } = ctx.params;
 
-  const content = await import(`../../posts/${postname}.md`);
+  const content = await import(`../../posts/${slug}.md`);
   const data = matter(content.default);
 
   return {
