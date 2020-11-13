@@ -28,10 +28,10 @@ collections:
           - { label: 'Main text', name: 'mainText', widget: 'string' }
           - { label: 'Bottom text', name: 'bottomText', widget: 'string' }
           - label: 'Stacks'
-              name: 'stacks'
-              widget: list
-              fields:
-                - { label: 'Name', name: 'name', widget: 'string' }
+            name: 'stacks'
+            widget: list
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
   - name: 'post'
     label: 'Post'
     folder: 'src/posts'
