@@ -26,7 +26,6 @@ collections:
           - { label: 'Page title', name: 'pageTitle', widget: 'string' }
           - { label: 'Top text', name: 'topText', widget: 'string' }
           - { label: 'Main text', name: 'mainText', widget: 'string' }
-          - { label: 'Profile Photo', name: 'profilePhoto', widget: 'image' }
           - { label: 'Bottom text', name: 'bottomText', widget: 'string' }
           - label: 'Stacks'
               name: 'stacks'
