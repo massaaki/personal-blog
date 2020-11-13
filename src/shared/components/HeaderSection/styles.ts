@@ -5,13 +5,6 @@ export const Header = styled.section`
   height: 50vh;
   width: 100%;
   display: flex;
-  svg {
-    z-index: 0;
-    position: absolute;
-    left: -16%;
-    opacity: 0.6;
-    top: 30px;
-  }
 `;
 
 export const Content = styled.div`
@@ -33,8 +26,12 @@ export const Content = styled.div`
     margin-bottom: 7px;
     color: #535353;
   }
-
-  /* background: red; */
+  ul li a {
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;
 
 export const Description = styled.p`

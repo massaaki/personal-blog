@@ -15,7 +15,23 @@ collections:
           - { label: 'Top text', name: 'topText', widget: 'string' }
           - { label: 'Main text', name: 'mainText', widget: 'string' }
           - { label: 'Bottom text', name: 'bottomText', widget: 'string' }
-
+          - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+  - name: 'about'
+    label: 'About'
+    files:
+      - label: 'About'
+        name: 'about'
+        file: 'src/contents/pages/about.md'
+        fields:
+          - { label: 'Page title', name: 'pageTitle', widget: 'string' }
+          - { label: 'Top text', name: 'topText', widget: 'string' }
+          - { label: 'Main text', name: 'mainText', widget: 'string' }
+          - { label: 'Bottom text', name: 'bottomText', widget: 'string' }
+          - label: 'Stacks'
+              name: 'stacks'
+              widget: list
+              fields:
+                - { label: 'Name', name: 'name', widget: 'string' }
   - name: 'post'
     label: 'Post'
     folder: 'src/posts'
