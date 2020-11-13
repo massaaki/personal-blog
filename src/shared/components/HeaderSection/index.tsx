@@ -1,8 +1,11 @@
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+
 import { Header, Content, Description } from './styles';
 
 import IHeader from 'models/interfaces/IHeader';
-import BackgroundAbstract from 'shared/icons/BackgroundAbstract';
-const HeaderSection = ({ topText, mainText, bottomText }: IHeader) => {
+
+const HeaderSection = ({ topText, mainText, bottomText, github }: IHeader) => {
   return (
     <Header>
       {/* <BackgroundAbstract /> */}
@@ -10,6 +13,17 @@ const HeaderSection = ({ topText, mainText, bottomText }: IHeader) => {
         <p>{topText}</p>
         <h1>{mainText}</h1>
         <Description>{bottomText}</Description>
+        {github && (
+          <ul>
+            <li>
+              <Link href={github}>
+                <a target="_blank">
+                  <FaGithub />
+                </a>
+              </Link>
+            </li>
+          </ul>
+        )}
       </Content>
     </Header>
   );

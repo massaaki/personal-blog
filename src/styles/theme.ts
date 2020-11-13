@@ -11,7 +11,8 @@ const theme = {
       textHover: '#fff',
       footerText: '#fff',
       codeBackground: '#fff',
-      codeText: '#555'
+      codeText: '#555',
+      stacksColor: 'rgb(106, 152, 240)'
     },
     light: {
       navBackground: '#fff',
@@ -22,7 +23,8 @@ const theme = {
       textHover: '#555',
       footerText: '#fff',
       codeBackground: '#D8D8D8',
-      codeText: '#101214'
+      codeText: '#101214',
+      stacksColor: 'rgb(106, 152, 240)'
     }
   }
 };
