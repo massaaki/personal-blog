@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import IPost from '../../../models/interfaces/IPost';
+
+import StackIconSelector from 'shared/components/StackIconSelector';
 import BackgroundAbstract from 'shared/icons/BackgroundAbstract';
-import { List, ThumbFake } from './styles';
+
+import { List, ThumbFake, PublishDate } from './styles';
 interface IRequest {
   posts?: IPost[];
 }
@@ -24,7 +27,34 @@ const PostList = ({ posts }: IRequest) => {
                         <BackgroundAbstract />
                       </ThumbFake>
                     )}
-                    {post.frontmatter.title}
+                    {post.frontmatter.publishDate && (
+                      <PublishDate>
+                        {post.frontmatter.publishDate} min.
+                      </PublishDate>
+                    )}
+                    <h2>{post.frontmatter.title}</h2>
+                    {post.frontmatter.level && (
+                      <p>
+                        Level: <span>{post.frontmatter.level}</span>
+                      </p>
+                    )}
+                    {post.frontmatter.minToRead && (
+                      <p>
+                        Tempo de leitura:
+                        <span> {post.frontmatter.minToRead} min.</span>
+                      </p>
+                    )}
+                    {post.frontmatter.stacks && (
+                      <ul>
+                        {post.frontmatter.stacks.map(stack => {
+                          return (
+                            <li>
+                              <StackIconSelector name={stack.name} />
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
                   </a>
                 </Link>
               </li>
