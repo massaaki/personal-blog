@@ -46,10 +46,10 @@ const PostList = ({ posts }: IRequest) => {
                     )}
                     {post.frontmatter.stacks && (
                       <ul>
-                        {post.frontmatter.stacks.map(stack => {
+                        {post.frontmatter.stacks.map((stack, index) => {
                           return (
-                            <li>
-                              <StackIconSelector name={stack.name} />
+                            <li key={index}>
+                              <StackIconSelector name={stack} />
                             </li>
                           );
                         })}

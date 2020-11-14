@@ -69,7 +69,7 @@ const SinglePost = ({ frontmatter, markdownBody }: IRequest) => {
                 {frontmatter.stacks.map((stack, index) => {
                   return (
                     <li key={index}>
-                      <StackIconSelector name={stack.name} />{' '}
+                      <StackIconSelector name={stack} />
                     </li>
                   );
                 })}
