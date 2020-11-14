@@ -52,7 +52,7 @@ export async function getStaticProps() {
       };
     });
     return data;
-  })(require.context('../posts', true, /\.md$/));
+  })(require.context('../contents/posts', true, /\.md$/));
 
   const homeMd = await import('contents/pages/home.md');
   const { data: homeData } = matter(homeMd.default);

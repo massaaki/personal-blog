@@ -26,7 +26,7 @@ const post = ({ frontmatter, markdownBody }: IRequest) => {
 
 export async function getStaticPaths() {
   const paths = fs
-    .readdirSync(path.join(process.cwd(), 'src/posts'))
+    .readdirSync(path.join(process.cwd(), 'src/contents/posts'))
     .map(postName => {
       const trimmedName = postName.substring(0, postName.length - 3);
       return {
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params;
-  const content = await import(`../../posts/${slug}.md`);
+  const content = await import(`../../contents/posts/${slug}.md`);
   const data = matter(content.default);
 
   return {
