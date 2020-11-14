@@ -3,10 +3,7 @@ import matter from 'gray-matter';
 import DefaultLayout from '../../shared/layout/DefaultLayout';
 import HeaderSection from 'shared/components/HeaderSection';
 import Profile from 'shared/components/Profile';
-
-interface IStack {
-  name: string;
-}
+import Stack from 'models/enums/Stack';
 
 interface IAbout {
   pageTitle?: string;
@@ -14,7 +11,7 @@ interface IAbout {
   mainText?: string;
   bottomText?: string;
   github?: string;
-  stacks?: IStack[];
+  stacks?: Stack[];
 }
 
 interface IRequest {

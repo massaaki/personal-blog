@@ -5,11 +5,11 @@ mainText: Maurício Massaaki
 bottomText: ̶d̶e̶v̶e̶l̶o̶p̶e̶r̶ ̶ problem solver
 github: https://github.com/massaaki
 stacks:
-  - name: ReactJs
-  - name: NextJs
-  - name: NodeJs
-  - name: Laravel
-  - name: VueJs
+  - ReactJs
+  - NextJs
+  - NodeJs
+  - Laravel
+  - VueJs
 ---
 
 Sou formado em engenharia da computação e durante 3 anos foi Líder de Projetos de Novos Modelos na Honda, tive a oportunidade de passar 3 meses no Vale do Silício, fui freelancer por 3 anos aprendendo onde tive a oportunidade de dominar stacks como Laravel, Node e React. Atualmente estou trabalhando em plataformas de streaming. Sou um apaixonado em aprender sobre coisas que solucionam de forma simples problemas complexos.

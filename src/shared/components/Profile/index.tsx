@@ -1,12 +1,9 @@
 import { ProfileSection, Description, Stacks } from './styles';
 import StackIconSelector from 'shared/components/StackIconSelector';
-
-interface IStack {
-  name: string;
-}
+import Stack from 'models/enums/Stack';
 
 interface IRequest {
-  stacks: IStack[];
+  stacks: Stack[];
   children: any;
 }
 
@@ -23,7 +20,7 @@ const Profile = ({ stacks, children }: IRequest) => {
             {stacks.map((stack, index) => {
               return (
                 <li key={index}>
-                  <StackIconSelector name={stack.name} />
+                  <StackIconSelector name={stack} />
                 </li>
               );
             })}
