@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import IFrontMatter from 'models/interfaces/IFrontmatter';
 
 import { FaCalendarAlt, FaRegClock } from 'react-icons/fa';
-import { SiFirebase, SiReact, SiHtml5, SiCss3 } from 'react-icons/si';
+import StackIconSelector from 'shared/components/StackIconSelector';
 import {
   Post,
   PostContent,
@@ -30,12 +30,17 @@ const SinglePost = ({ frontmatter, markdownBody }: IRequest) => {
         <ArticleHeader>
           <PublicationInformation>
             <ul>
-              <li>
-                <FaCalendarAlt /> 22/08/2020
-              </li>
-              <li>
-                <FaRegClock /> 15min to read
-              </li>
+              {frontmatter.publishDate && (
+                <li>
+                  <FaCalendarAlt />
+                  {frontmatter.publishDate}
+                </li>
+              )}
+              {frontmatter.minToRead && (
+                <li>
+                  <FaRegClock /> {frontmatter.minToRead}min to read
+                </li>
+              )}
             </ul>
           </PublicationInformation>
           <Title>{frontmatter.title}</Title>
@@ -49,30 +54,30 @@ const SinglePost = ({ frontmatter, markdownBody }: IRequest) => {
         </PostContent>
       </Article>
 
-      <PostInfo>
-        <DevLevel>
-          Complexidade:&nbsp;
-          <span>Fácil</span>
-        </DevLevel>
-
-        <Tags>
-          <h3>Stacks</h3>
-          <ul>
-            <li>
-              <SiReact />
-            </li>
-            <li>
-              <SiHtml5 />
-            </li>
-            <li>
-              <SiCss3 />
-            </li>
-            <li>
-              <SiFirebase />
-            </li>
-          </ul>
-        </Tags>
-      </PostInfo>
+      {(frontmatter.level || frontmatter.stacks) && (
+        <PostInfo>
+          {frontmatter.level && (
+            <DevLevel>
+              Level:&nbsp;
+              <span>{frontmatter.level}</span>
+            </DevLevel>
+          )}
+          {frontmatter.stacks && (
+            <Tags>
+              <h3>Stacks</h3>
+              <ul>
+                {frontmatter.stacks.map((stack, index) => {
+                  return (
+                    <li key={index}>
+                      <StackIconSelector name={stack.name} />{' '}
+                    </li>
+                  );
+                })}
+              </ul>
+            </Tags>
+          )}
+        </PostInfo>
+      )}
     </Post>
   );
 };
