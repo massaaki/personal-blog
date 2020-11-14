@@ -31,7 +31,7 @@ collections:
             name: 'stacks'
             widget: list
             fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
+              - { widget: 'string' }
   - name: 'post'
     label: 'Post'
     # folder: 'src/posts'
