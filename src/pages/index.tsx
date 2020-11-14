@@ -5,6 +5,7 @@ import PostsList from 'shared/components/PostsList';
 import IPost from 'models/interfaces/IPost';
 
 import HeaderSection from 'shared/components/HeaderSection';
+import IFrontMatter from 'models/interfaces/IFrontmatter';
 
 interface IHomeData {
   pageTitle: string;
@@ -44,10 +45,20 @@ export async function getStaticProps() {
       let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3);
       const value = values[index];
 
-      const document = matter(value.default);
+      const { data: info, content: postBody } = matter(value.default);
+
+      const postInfo = {
+        title: info.title,
+        author: info.author,
+        minToRead: info.minToRead,
+        level: info.level,
+        stacks: info.stacks,
+        publishDate: new Date(info.publishDate).toUTCString()
+      };
+
       return {
-        frontmatter: document.data,
-        markdownBody: document.content,
+        frontmatter: postInfo,
+        markdownBody: postBody,
         slug
       };
     });
