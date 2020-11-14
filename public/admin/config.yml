@@ -1,6 +1,6 @@
 backend:
-  # name: test-repo
-  name: git-gateway
+  name: test-repo
+  # name: git-gateway
   branch: main
 media_folder: public/img/publications
 collections:
@@ -30,8 +30,7 @@ collections:
           - label: 'Stacks'
             name: 'stacks'
             widget: list
-            fields:
-              - { widget: 'string' }
+            field: { widget: 'string' }
   - name: 'post'
     label: 'Post'
     # folder: 'src/posts'
