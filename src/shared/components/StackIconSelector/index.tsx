@@ -3,16 +3,13 @@ import {
   SiReact,
   SiNodeDotJs,
   SiLaravel,
-  SiVueDotJs
+  SiVueDotJs,
+  SiFirebase,
+  SiMysql,
+  SiDotNet
 } from 'react-icons/si';
 
-enum StackName {
-  reactjs = 'reactjs',
-  nextjs = 'nextjs',
-  nodejs = 'nodejs',
-  laravel = 'laravel',
-  vuejs = 'vuejs'
-}
+import Stacks from 'models/enums/Stack';
 
 interface IRequest {
   name: string;
@@ -20,11 +17,14 @@ interface IRequest {
 
 const StackIconSelector = ({ name }: IRequest) => {
   const stackIcon = {
-    [StackName.reactjs]: <SiReact />,
-    [StackName.nextjs]: <SiNextDotJs />,
-    [StackName.nodejs]: <SiNodeDotJs />,
-    [StackName.laravel]: <SiLaravel />,
-    [StackName.vuejs]: <SiVueDotJs />
+    [Stacks.reactjs]: <SiReact />,
+    [Stacks.nextjs]: <SiNextDotJs />,
+    [Stacks.nodejs]: <SiNodeDotJs />,
+    [Stacks.laravel]: <SiLaravel />,
+    [Stacks.vuejs]: <SiVueDotJs />,
+    [Stacks.firebase]: <SiFirebase />,
+    [Stacks.sql]: <SiMysql />,
+    [Stacks.dotnet]: <SiDotNet />
   };
 
   return stackIcon[name];
