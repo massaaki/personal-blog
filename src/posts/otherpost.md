@@ -2,6 +2,10 @@
 title: 'OTHER POST'
 author: 'Author here'
 thumbnail: /img/publications/thumbtest.png
+stacks:
+  - name: ReactJs
+  - name: NextJs
+  - name: NodeJs
 ---
 
 ## Some title here

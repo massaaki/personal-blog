@@ -34,12 +34,49 @@ collections:
               - { label: 'Name', name: 'name', widget: 'string' }
   - name: 'post'
     label: 'Post'
-    folder: 'src/posts'
+    # folder: 'src/posts'
+    folder: 'src/contents/posts'
     slug: '{{slug}}'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'MinToRead', name: 'minToRead', widget: 'number' }
+      - {
+          label: 'Level',
+          name: 'level',
+          widget: 'select',
+          options: ['Iniciante', 'Médio', 'Avançado'],
+        }
+      - {
+          label: 'Stacks',
+          name: 'stacks',
+          widget: 'select',
+          required: false,
+          multiple: true,
+          options:
+            [
+              'ReactJs',
+              'NextJs',
+              'NodeJs',
+              'Laravel',
+              'VueJs',
+              'Firebase',
+              'Sql',
+              'DotNet',
+            ],
+        }
+      - {
+          label: 'Featured Image',
+          name: 'thumbnail',
+          widget: 'image',
+          required: false,
+        }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          required: false,
+        }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
     sortableFields: ['title', 'author']
