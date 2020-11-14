@@ -9,22 +9,22 @@ import {
   SiDotNet
 } from 'react-icons/si';
 
-import Stacks from 'models/enums/Stack';
+import Stack from 'models/enums/Stack';
 
 interface IRequest {
-  name: string;
+  name: Stack;
 }
 
 const StackIconSelector = ({ name }: IRequest) => {
   const stackIcon = {
-    [Stacks.reactjs]: <SiReact />,
-    [Stacks.nextjs]: <SiNextDotJs />,
-    [Stacks.nodejs]: <SiNodeDotJs />,
-    [Stacks.laravel]: <SiLaravel />,
-    [Stacks.vuejs]: <SiVueDotJs />,
-    [Stacks.firebase]: <SiFirebase />,
-    [Stacks.sql]: <SiMysql />,
-    [Stacks.dotnet]: <SiDotNet />
+    [Stack.reactjs]: <SiReact />,
+    [Stack.nextjs]: <SiNextDotJs />,
+    [Stack.nodejs]: <SiNodeDotJs />,
+    [Stack.laravel]: <SiLaravel />,
+    [Stack.vuejs]: <SiVueDotJs />,
+    [Stack.firebase]: <SiFirebase />,
+    [Stack.sql]: <SiMysql />,
+    [Stack.dotnet]: <SiDotNet />
   };
 
   return stackIcon[name];
