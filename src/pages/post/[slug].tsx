@@ -43,12 +43,22 @@ export async function getStaticPaths() {
 export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params;
   const content = await import(`../../contents/posts/${slug}.md`);
-  const data = matter(content.default);
+
+  const { data: info, content: postBody } = matter(content.default);
+
+  const postInfo = {
+    title: info.title,
+    author: info.author,
+    minToRead: info.minToRead,
+    level: info.level,
+    stacks: info.stacks,
+    publishDate: new Date(info.publishDate).toUTCString()
+  };
 
   return {
     props: {
-      frontmatter: data.data,
-      markdownBody: data.content
+      frontmatter: postInfo,
+      markdownBody: postBody
     }
   };
 }
