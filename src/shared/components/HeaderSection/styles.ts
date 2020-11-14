@@ -28,8 +28,8 @@ export const Content = styled.div`
   }
   ul li a {
     svg {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
   }
 `;
