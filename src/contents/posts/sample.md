@@ -1,15 +1,17 @@
 ---
-title: 'Sample post'
-author: 'Author here'
+title: Sample post(updated)
+author: Author here
 minToRead: 15
-publishDate: 2019-09-06 08:28:44 UTC
-level: 'Iniciante'
+level: Iniciante
 stacks:
-  - name: ReactJs
-  - name: NextJs
-  - name: NodeJs
-  - name: Laravel
-  - name: VueJs
+  - Firebase
+  - Sql
+date: 2020-11-14T02:50:57.192Z
 ---
-
 Just a sample post
+
+```
+const sum = (n1, n2) => {  return n1+m2;}
+```
+
+Any questions?
