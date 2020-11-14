@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  display: inline-flexbox;
-
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
   li {
-    margin: 5px;
+    margin: 30px;
     border: 1px solid #f1f1f1;
     max-width: 300px;
     width: 100%;
