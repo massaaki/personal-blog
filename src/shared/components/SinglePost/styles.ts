@@ -82,11 +82,16 @@ export const PostContent = styled.div`
       width: 100%;
     }
   }
-  code {
+  pre {
+    margin: 30px 0;
+    width: 100%;
     background: ${props => props.theme.colors.light.codeBackground};
-    color: ${props => props.theme.colors.light.codeText};
     padding: 15px;
-    margin: 10px;
+    code {
+      color: ${props => props.theme.colors.light.codeText};
+      padding: 15px;
+      margin: 10px;
+    }
   }
 `;
 
