@@ -11,7 +11,6 @@ interface IRequest {
 }
 
 const Profile = ({ stacks, children }: IRequest) => {
-  console.log('stacks..:', stacks);
   return (
     <ProfileSection>
       <div className="about">
