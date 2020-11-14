@@ -1,9 +1,6 @@
 import Level from '../enums/Level';
 import Stack from '../enums/Stack';
 
-interface Stacks {
-  name: Stack;
-}
 interface IFrontMatter {
   title: string;
   author: string;
@@ -11,7 +8,7 @@ interface IFrontMatter {
   minToRead?: number;
   thumbnail?: string;
   level?: Level;
-  stacks?: Stacks[];
+  stacks?: Stack[];
 }
 
 export default IFrontMatter;
