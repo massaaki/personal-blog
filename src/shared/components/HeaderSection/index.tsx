@@ -1,14 +1,25 @@
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 
-import { Header, Content, Description } from './styles';
-
 import IHeader from 'models/interfaces/IHeader';
 
-const HeaderSection = ({ topText, mainText, bottomText, github }: IHeader) => {
+import { Header, Content, Description } from './styles';
+
+const HeaderSection = ({
+  topText,
+  mainText,
+  bottomText,
+  github,
+  BackgroundImage
+}: IHeader) => {
   return (
     <Header>
-      {/* <BackgroundAbstract /> */}
+      {BackgroundImage && (
+        <div className="codeBlock">
+          <BackgroundImage />
+        </div>
+      )}
+
       <Content>
         <p>{topText}</p>
         <h1>{mainText}</h1>

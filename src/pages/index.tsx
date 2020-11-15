@@ -5,7 +5,7 @@ import PostsList from 'shared/components/PostsList';
 import IPost from 'models/interfaces/IPost';
 
 import HeaderSection from 'shared/components/HeaderSection';
-import IFrontMatter from 'models/interfaces/IFrontmatter';
+import BlockOfCode from 'shared/icons/BlockOfCode';
 
 interface IHomeData {
   pageTitle: string;
@@ -27,6 +27,7 @@ const HomePage = ({ posts, homeData }: IRequest) => {
           topText={homeData?.topText}
           mainText={homeData?.mainText}
           bottomText={homeData?.bottomText}
+          BackgroundImage={BlockOfCode}
         />
         <main>
           <PostsList posts={posts} />
