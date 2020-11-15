@@ -6,7 +6,7 @@ level: Iniciante
 stacks:
   - Typescript
   - NextJs
-thumbnail: /public/img/publications/nextjs-why.webp
+thumbnail: /public/img/publications/nextjs-why.png
 publishDate: 2020-11-14T02:50:57.192Z
 ---
 Se você utiliza React já deve ter ouvido falar no NextJs, uma ferramenta que está ganhando cada vez mais o coração dos desenvolvedores então aqui você aprenderá como configurar uma aplicação utilizando o Next.
