@@ -1,6 +1,6 @@
 ---
-pageTitle: Mauricio Massaaki - Entrepeneur & Passionate Developer
-topText: Hello World,
-mainText: Welcome to learn
-bottomText: Things that can make your <code /> better
+pageTitle: Mauricio Massaaki - Passionate Leaner
+topText: Bem vind@,
+mainText: Blog
+bottomText: Coisas legais para compartilhar
 ---

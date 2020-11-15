@@ -15,6 +15,9 @@
 # production
 /build
 
+#posts
+/src/contents/posts/*
+
 #lock files
 yarn.lock
 
