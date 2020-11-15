@@ -2,7 +2,7 @@ backend:
   # name: test-repo
   name: git-gateway
   branch: main
-media_folder: public/img/publications
+media_folder: img/publications
 collections:
   - name: 'home'
     label: 'Home'
