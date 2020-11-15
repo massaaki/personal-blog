@@ -6,7 +6,8 @@ import {
   SiVueDotJs,
   SiFirebase,
   SiMysql,
-  SiDotNet
+  SiDotNet,
+  SiTypescript
 } from 'react-icons/si';
 
 import Stack from 'models/enums/Stack';
@@ -24,7 +25,8 @@ const StackIconSelector = ({ name }: IRequest) => {
     [Stack.vuejs]: <SiVueDotJs />,
     [Stack.firebase]: <SiFirebase />,
     [Stack.sql]: <SiMysql />,
-    [Stack.dotnet]: <SiDotNet />
+    [Stack.dotnet]: <SiDotNet />,
+    [Stack.typescript]: <SiTypescript />
   };
 
   return stackIcon[name];
