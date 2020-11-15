@@ -3,6 +3,7 @@ backend:
   name: git-gateway
   branch: main
 media_folder: public/img/publications
+public_folder: /img/publications
 collections:
   - name: 'home'
     label: 'Home'
