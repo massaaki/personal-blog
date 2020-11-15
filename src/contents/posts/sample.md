@@ -6,7 +6,7 @@ level: Iniciante
 stacks:
   - Typescript
   - NextJs
-thumbnail: /public/img/publications/nextjs-why.webp
+thumbnail: /img/publications/nextjs-why.webp
 publishDate: 2020-11-14T02:50:57.192Z
 ---
 Se você utiliza React já deve ter ouvido falar no NextJs, uma ferramenta que está ganhando cada vez mais o coração dos desenvolvedores então aqui você aprenderá como configurar uma aplicação utilizando o Next.
@@ -72,8 +72,10 @@ const MyApp = ({ Component, pageProps }): JSX.Element => {
 export default MyApp;
 ```
 
-5. Para organizar melhor o projeto, crie uma pasta chamada **src** e mova a pasta **pages** para ela, aproveite e delete a pasta api e styles.  
-   ![Estrutura de pastas](/public/img/publications/post01-pages-structure.png)
+5. Para organizar melhor o projeto, crie uma pasta chamada **src** e mova a pasta **pages** para ela, aproveite e delete a pasta api e styles
+   ![Estrutura de pastas](/img/publications/post01-pages-structure.png "Estrutura de pastas")
+
+
 6. Agora vamos finalmente iniciar o nosso projeto\
    Vamos adicionar uma rota **sobre** que ficará em <url>/about
    Para isso, basta criar uma o arquivo no caminho /src/pages/about/index.tsx
