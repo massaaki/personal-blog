@@ -69,13 +69,12 @@ export const PostContent = styled.div`
     max-width: 840px;
   }
   h2 {
-    margin: 10px 0;
-    font-size: 20px;
+    margin: 20px 0 5px 0;
+    font-size: 18px;
     font-weight: bold;
   }
   p {
-    display: flex;
-    flex-direction: column;
+    font-size: 15px;
     img {
       margin: 10px;
       width: 100%;
