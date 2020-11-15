@@ -76,7 +76,6 @@ export const PostContent = styled.div`
   p {
     display: flex;
     flex-direction: column;
-    align-items: center;
     img {
       margin: 10px;
       width: 100%;
