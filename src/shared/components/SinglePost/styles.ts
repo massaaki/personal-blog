@@ -88,16 +88,16 @@ export const PostContent = styled.div`
       padding: 10px 0px 10px 5px;
     }
   }
-  pre {
-    margin: 30px 0;
+  code {
+    display: inline-block;
     width: 100%;
     background: ${props => props.theme.colors.light.codeBackground};
+    color: ${props => props.theme.colors.light.codeText};
     padding: 15px;
-    code {
-      color: ${props => props.theme.colors.light.codeText};
-      padding: 15px;
-      margin: 10px;
-    }
+    margin: 10px;
+  }
+  ol {
+    margin: 15px 0;
   }
 `;
 
