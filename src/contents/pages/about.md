@@ -1,8 +1,8 @@
 ---
-pageTitle: Mauricio Massaaki - Entrepeneur & Passionate Developer
-topText: Hello, I'm,
+pageTitle: Mauricio Massaaki - Passionate Leaner
+topText: Olá, eu sou
 mainText: Maurício Massaaki
-bottomText: ̶d̶e̶v̶e̶l̶o̶p̶e̶r̶ ̶ problem solver
+bottomText: Engenheiro, Desenvolvedor e um eterno aprendiz
 github: https://github.com/massaaki
 stacks:
   - ReactJs
@@ -12,4 +12,4 @@ stacks:
   - VueJs
 ---
 
-Sou formado em engenharia da computação e durante 3 anos foi Líder de Projetos de Novos Modelos na Honda, tive a oportunidade de passar 3 meses no Vale do Silício, fui freelancer por 3 anos aprendendo onde tive a oportunidade de dominar stacks como Laravel, Node e React. Atualmente estou trabalhando em plataformas de streaming. Sou um apaixonado em aprender sobre coisas que solucionam de forma simples problemas complexos.
+Sou formado em engenharia da computação e trabalhei como Líder de Projetos de Novos Modelos na Honda por 3 anos, após isso, passei alguns meses no Vale do Silício para ter uma imersão real com a cultura mais inovadora do planeta, fui freelancer por 3 anos utilizando como principais stacks Swift, Ruby on Rails, Laravel, Node, React e React Native. Atualmente estou trabalhando em plataformas de streaming e no desafio de criar arquiteturas para suportar milhares de acessos. Sou um apaixonado em utilizar novas tecnologias e entender como podemos aplicá-las para solucionar os problemas do dia a dia das pessoas.
