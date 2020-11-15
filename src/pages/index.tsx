@@ -55,7 +55,7 @@ export async function getStaticProps() {
         level: info.level,
         stacks: info.stacks,
         publishDate: new Date(info.publishDate).toUTCString(),
-        thumbnail: info.thumbnail? info.thumbnail.replace('/public', '') : null
+        thumbnail: info.thumbnail ? info.thumbnail : null
       };
 
       return {
