@@ -6,7 +6,8 @@ enum Stack {
   vuejs = 'VueJs',
   firebase = 'Firebase',
   sql = 'Sql',
-  dotnet = 'DotNet'
+  dotnet = 'DotNet',
+  typescript = 'Typescript'
 }
 
 export default Stack;
