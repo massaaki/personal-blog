@@ -72,8 +72,8 @@ const MyApp = ({ Component, pageProps }): JSX.Element => {
 export default MyApp;
 ```
 
-5. Para organizar melhor o projeto, crie uma pasta chamada **src** e mova a pasta **pages** para ela, aproveite e delete a pasta api e styles.
-
+5. Para organizar melhor o projeto, crie uma pasta chamada **src** e mova a pasta **pages** para ela, aproveite e delete a pasta api e styles.  
+   ![Estrutura de pastas](/public/img/publications/post01-pages-structure.png)
 6. Agora vamos finalmente iniciar o nosso projeto\
    Vamos adicionar uma rota **sobre** que ficará em <url>/about
    Para isso, basta criar uma o arquivo no caminho /src/pages/about/index.tsx
