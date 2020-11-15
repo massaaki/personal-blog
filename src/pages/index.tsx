@@ -53,7 +53,8 @@ export async function getStaticProps() {
         minToRead: info.minToRead,
         level: info.level,
         stacks: info.stacks,
-        publishDate: new Date(info.publishDate).toUTCString()
+        publishDate: new Date(info.publishDate).toUTCString(),
+        thumbnail: info.thumbnail? info.thumbnail : null
       };
 
       return {
