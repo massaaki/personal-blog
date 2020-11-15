@@ -80,6 +80,14 @@ export const PostContent = styled.div`
       width: 100%;
     }
   }
+  blockquote {
+    margin: 10px 0;
+    padding: 5px 0;
+    p {
+      border-left: 3px solid ${props => props.theme.colors.light.stacksColor};
+      padding: 10px 0px 10px 5px;
+    }
+  }
   pre {
     margin: 30px 0;
     width: 100%;
