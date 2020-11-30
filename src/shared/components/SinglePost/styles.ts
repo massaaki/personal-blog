@@ -97,6 +97,7 @@ export const PostContent = styled.div`
     color: ${props => props.theme.colors.light.codeText};
     padding: 15px;
     margin: 10px 10px 30px 10px;
+    overflow-x: auto;
   }
   ol {
     margin: 15px 0;
