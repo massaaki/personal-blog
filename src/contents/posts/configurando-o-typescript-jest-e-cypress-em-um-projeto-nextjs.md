@@ -18,11 +18,9 @@ O site [stateofjs](https://2019.stateofjs.com/pt/testing/) realizou uma pesquisa
 
 E para você que utiliza o NextJs, React( ou qualquer outro framework) com Typescript, pode ter passado alguns problemas para instalar o Jest com o Cypress, então ao final desta leitura você será capaz de configurar a sua aplicação(**NextJs**, com **Typescript** e **Eslint**) com as bibliotecas de test **Jest** e **Cypress** sem conflitos de tipagem.
 
-
-
 Antes de mais nada, inicie um projeto **Next**, instale e configure o **Typescript** e o **Eslint.**
 
-****
+- - -
 
 ## Instalando, configurando e criando o primeiro teste com Jest
 
@@ -47,13 +45,23 @@ env {  "jest": true,  "node": true}
 Agora crie um arquivo jest.config.js na raiz do projeto e insira as configurações do jest
 
 ```
-module.exports = {  testEnvironment: 'jsdom',  testPathIgnorePatterns: ['/node_modules/', '/next/'],  collectCoverage: true,  collectCoverageFrom: ['src/**/*.ts(x)?'],  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']}
+module.exports = {  
+  testEnvironment: 'jsdom',  
+  testPathIgnorePatterns: ['/node_modules/', '/next/'],  
+  collectCoverage: true,  collectCoverageFrom: ['src/**/*.ts(x)?'], 
+  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']
+}
 ```
 
 Caso você ainda não tenha, crie um arquivo .babelrc na raiz do projeto
 
 ```
-{  "presets": ["next/babel", "@babel/preset-typescript"]}
+{  
+  "presets": [
+    "next/babel", 
+    "@babel/preset-typescript"
+  ]
+}
 ```
 
 Agora vamos importar o testing librar no Jest
@@ -67,7 +75,11 @@ import '@testing-library/jest-dom'
 Para concluir a configuração do Jest, em package.json insira os scripts para conseguir rodar o teste
 
 ```
-"scripts": {  "test": "jest",  "test:watch": "yarn test --watch"}
+"scripts": {  
+  "test": "jest",
+  "test:watch":
+  "yarn test --watch"
+}
 ```
 
 Pronto, agora com o Jest instalado e configurado, crie o seu primeiro teste
@@ -87,12 +99,21 @@ No arquivo index.tsx insira um código simples
 Agora podemos criar o nosso teste, vamos verificar se o h1 contém 'Some text'. No arquivo test.tsx insira:
 
 ```
-import {render, screen} from '@testing-library/react'import Main from '.'describe('<Main />', () => {  it('should render the heading',() => {    render(<Main />)    expect(      screen.getByRole('heading', { name: /som test/i})     ).toBeInTheDocument()  }}
+import {render, screen} from '@testing-library/react'
+
+import Main from '.'
+
+describe('<Main />', () => {  
+  it('should render the heading',() => {    
+    render(<Main />)    
+    expect(      
+      screen.getByRole('heading', { name: /som test/i})
+    ).toBeInTheDocument()  
+  }
+}
 ```
 
 pronto, agora temos o jest e o nosso primeiro teste configurado, simples assim =)
-
-
 
 ## Instalando, configurando e fazendo um exemplo com Cypress
 
@@ -105,19 +126,40 @@ yarn add "cypress" "@types/mocha" "@types/chai"
 crie um arquivo na raiz chamado cypress.json 
 
 ```
-{  "pluginsFile": false,  "supportFile": false,  "fixturesFolder": false}
+{  
+  "pluginsFile": false,  
+  "supportFile": false,  
+  "fixturesFolder": false
+}
 ```
 
 Acesse o tsconfig.json localizado na raiz e altere o 'include' para direcionar as configurações apenas para a pasta src (ou onde você insere os seus arquivos que trabalha)
 
 ```
-"include": [   ...   "src/**/*.ts",   "src/**/*.tsx"],
+"include": [   
+  ...   
+  "src/**/*.ts",   
+  "src/**/*.tsx"
+],
 ```
 
 Com isso, agora podemos extender o arquivo typescript e incluir as tipagens do cypress somente para os arquivos da pasta dos testes do cypress. Para isso se não tiver, crie uma pasta cypress na raiz do projeto e dentro de dela crie um arquivo tsconfig.json.
 
 ```
-{  "extends": "../tsconfig.json",  "compilerOptions": {    "noEmit": false,    "isolatedModules": false  },  "include": [    "../node_modules/cypress",    "./*/*.ts"  ],  "exclude": ["../node_modules/cypress/**/*.js"]}
+{  
+  "extends": "../tsconfig.json",  
+  "compilerOptions": {    
+    "noEmit": false,    
+    "isolatedModules": false  
+  },  
+  "include": [    
+    "../node_modules/cypress",    
+    "./*/*.ts"  
+  ],  
+  "exclude": ["../node_modules/cypress/**/*.js"]  
+ 
+}  
+
 ```
 
 Agora crie o seu primeiro teste com cypress, em nosso caso, vamos apenas fazer uma visita a url 'http://localhost:3000'. 
@@ -125,13 +167,21 @@ Agora crie o seu primeiro teste com cypress, em nosso caso, vamos apenas fazer u
 Dentro de cypress, crie um arquivo chamado visitHomePage.ts
 
 ```
-describe('SampleTest', () => {  it('Shows Home page', function () {    cy.visit('http://localhost:3000')  }}
+describe('SampleTest', () => {  
+  it('Shows Home page', function () {    
+    cy.visit('http://localhost:3000')  
+  }
+})
 ```
 
 Por fim, vamos configurar o package.json com os comandos para rodar o teste
 
 ```
-"scripts": {  "cypress": "cypress run",  "cypress:chrome": "cypress run -b chrome",  "cypress:open": "cypress open"}
+"scripts": {  
+  "cypress": "cypress run",  
+  "cypress:chrome": "cypress run -b chrome",  
+  "cypress:open": "cypress open"
+}
 ```
 
 Pronto! com isso, agora você pode criar e rodar seus testes no componente com Jest e os testes ponta a ponta com o Cypress!
