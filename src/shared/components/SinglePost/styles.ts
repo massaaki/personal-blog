@@ -66,6 +66,7 @@ export const PostContent = styled.div`
 
   img {
     max-width: 840px;
+    width: 100%;
   }
   h2 {
     margin: 45px 0px 10px 0;
@@ -76,6 +77,9 @@ export const PostContent = styled.div`
     font-size: 15px;
     img {
       margin: 10px;
+      @media (max-width: 500px) {
+        margin: 10px 0;
+      }
     }
   }
   blockquote {
