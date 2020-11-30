@@ -68,7 +68,7 @@ export const PostContent = styled.div`
     max-width: 840px;
   }
   h2 {
-    margin: 20px 0 5px 0;
+    margin: 45px 0px 10px 0;
     font-size: 18px;
     font-weight: bold;
   }
@@ -92,7 +92,7 @@ export const PostContent = styled.div`
     background: ${props => props.theme.colors.light.codeBackground};
     color: ${props => props.theme.colors.light.codeText};
     padding: 15px;
-    margin: 10px;
+    margin: 10px 10px 30px 10px;
   }
   ol {
     margin: 15px 0;

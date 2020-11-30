@@ -12,7 +12,8 @@ const theme = {
       footerText: '#fff',
       codeBackground: '#fff',
       codeText: '#555',
-      stacksColor: 'rgb(106, 152, 240)'
+      stacksColor: 'rgb(106, 152, 240)',
+      titleColor: 'rgb(106, 152, 240)'
     },
     light: {
       navBackground: '#fff',
@@ -22,9 +23,10 @@ const theme = {
       text: '#222',
       textHover: '#555',
       footerText: '#fff',
-      codeBackground: '#D8D8D8',
-      codeText: '#101214',
-      stacksColor: 'rgb(106, 152, 240)'
+      codeBackground: 'rgb(25, 25, 25)',
+      codeText: '#fff',
+      stacksColor: 'rgb(106, 152, 240)',
+      titleColor: 'rgb(106, 152, 240)'
     }
   }
 };
