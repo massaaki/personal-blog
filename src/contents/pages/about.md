@@ -1,8 +1,8 @@
 ---
 pageTitle: Mauricio Massaaki - Passionate Leaner
-topText: 'Olá, eu sou'
+topText: 'Hi, I''m'
 mainText: Maurício Massaaki
-bottomText: Engenheiro de Software apaixonado por criar e desenvolver novas ideias
+bottomText: Software Engineer && problem solver
 stacks:
   - ReactJs
   - NextJs
