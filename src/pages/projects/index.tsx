@@ -6,9 +6,9 @@ const ImmersionPage = () => {
     <DefaultLayout pageTitle="Series - Real time Learning">
       <div className="main">
         <HeaderSection
-          topText="Algumas coisas que estou me aprofundando"
-          mainText="Imersão"
-          bottomText="Machine Learn, Architecture & Development"
+          topText=""
+          mainText="Projetos"
+          bottomText="Desenvolvimento Front-end, Back-end, Infraestrutura e Data Science"
         />
         <p>Em andamento...</p>
       </div>
