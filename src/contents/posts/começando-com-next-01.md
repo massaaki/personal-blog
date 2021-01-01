@@ -1,5 +1,5 @@
 ---
-title: 'Começando com Next #01'
+title: 'Next #01 - Por que o Next?'
 author: Massaaki
 minToRead: 15
 level: Médio
