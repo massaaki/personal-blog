@@ -1,5 +1,5 @@
 ---
-title: 'Começando com Next #02'
+title: 'Next #02 - Iniciando a base do projeto'
 author: Massaaki
 minToRead: 30
 level: Médio
