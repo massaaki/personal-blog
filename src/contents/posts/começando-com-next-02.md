@@ -27,8 +27,14 @@ yarn create next-app next-boilerplate
 yarn add typescript @types/react @types/node -D
 ```
 
-3. Na raiz do projeto, crie um arquivo chamado **tsconfig.json**  
-4. Acesse a pasta \*\*pages\*\* e altere a extensão dos arquivos de .js para .tsx(typescrit with jsx). \
+3. Na raiz do projeto, crie um arquivo chamado:
+
+
+```
+tsconfig.json
+```
+
+3. Acesse a pasta \*\*pages\*\* e altere a extensão dos arquivos de .js para .tsx(typescrit with jsx). \
    Agora, remova todo o conteúdo, e escreva apenas um JSX básico na tela Home
 
 
