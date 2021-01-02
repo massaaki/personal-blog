@@ -23,31 +23,38 @@ npx eslint --init
 Em seguida, devemos responder alguns questionários para fazermos as configurações iniciais do Eslint:
 
 ```
-How would you like to use Eslint?Selecione a opção: -To check syntax and find problems
+How would you like to use Eslint?  
+Selecione a opção: -To check syntax and find problems
 ```
 
 ```
-What type of modules does your project use?Selecione a opção: -Javascript modules(import/export)
+What type of modules does your project use?  
+Selecione a opção: -Javascript modules(import/export)
 ```
 
 ```
-Which framework does your project use?Selecione a opção: -React
+Which framework does your project use?  
+Selecione a opção: -React
 ```
 
 ```
-Does your project use Typescript?digite: y
+Does your project use Typescript?  
+digite: y
 ```
 
 ```
-Where does your project run?selecione a opção: -Browser
+Where does your project run?  
+selecione a opção: -Browser
 ```
 
 ```
-What format do you want your config file to be in?selecione a opção: -Json
+What format do you want your config file to be in?  
+selecione a opção: -Json
 ```
 
 ```
-Would you like to install using npm?selecione a opção: -No
+Would you like to install using npm?  
+selecione a opção: -No
 ```
 
 Após finalizar o questionário, ainda no terminal (como informamos que não desejamos instalar utilizando o npm), aparecerá uma mensagem das bibliotecas que serão necessários instalar, apenas copie e instale com o yarn:
@@ -56,11 +63,7 @@ Após finalizar o questionário, ainda no terminal (como informamos que não des
 yarn add -D <copie as bibliotecas aqui>
 ```
 
-
-
 Estamos quase finalizando! note que um arquivo chamado **.eslintrc.json** foi criado e agora vamos adicionar as extensões e algumas regras para o nosso projeto.
-
-
 
 ## Configurações adicionais
 
@@ -73,31 +76,66 @@ yarn add -D eslint-plugin-react-hooks
 No arquivo .estlintrc.json insira as seguintes configurações:
 
 ```
-{  "plugins": [    ...    "react-hooks"  ],  "rules": {    ...    "react-hooks/rules-of-hooks": "error",    "react-hooks/exhaustive-deps": "warn"  }}
+{  "plugins":  
+  [    
+    ...  
+    "react-hooks"  
+  ],  
+  "rules": {  
+    ...  
+    "react-hooks/rules-of-hooks": "error",  
+    "react-hooks/exhaustive-deps": "warn"  
+  }  
+}
 ```
 
 Como o typescript já nos garante a definição de tipagem, podemos desabilitar a necessidade do prop-types, adicione esta regra ao .eslint.json:
 
 ```
-{  ...  "rules": {    ...    "react/prop-types": "off"  }}
+{  
+  ...  
+  "rules": {  
+    ...
+    "react/prop-types": "off"  
+  }  
+}
 ```
 
 Uma particularidade do Next é que o React já é importado automaticamente nos arquivos, então podemos desabilitar esta regra:
 
 ```
-{  ...  "rules": {    ...    "react/react-in-jsx-scope": "off"  }}
+{  
+  ...  
+  "rules": {  
+    ...  
+    "react/react-in-jsx-scope": "off"  
+  }  
+}
 ```
 
 Uma boa prática para projetos typescript é tipar apenas o essencial(ou seja, os tipos que o typescript não conseguir inferir), e deixar as coisas mais básicas serem tipadas automaticamente, então podemos desabilitar esta regra:
 
 ```
-{  ...  "rules": {    ...    "@typescript-eslint/explicit-module-boundary-types": "off"  }}
+{  
+  ...  
+  "rules": {  
+    ...  
+    "@typescript-eslint/explicit-module-boundary-types": "off"  
+  }  
+}
 ```
 
 Pelo fato de estarmos utilizando os plugins do React, precisamos passar a sua versão, então adicione o settings no arquivo .eslintrc.json
 
 ```
-{  ...  "settings": {    "react": {      "version": "detect"    }  }}
+{  
+  ...  
+  "settings": {  
+    "react": {  
+      "version": "detect"  
+    }  
+  }  
+}
 ```
 
 Agora vamos adicionar o script para rodarmos o eslint pelo terminal, no arquivo package.json, adicione o seguinte script:
@@ -105,7 +143,5 @@ Agora vamos adicionar o script para rodarmos o eslint pelo terminal, no arquivo 
 ```
 "lint": "eslint src"
 ```
-
-
 
 Simples assim, agora temos o Eslint configurado em nosso projeto NextJs, e já podemos partir para configurar o Prettier, que será responsável por formatar o nosso código de uma forma muito mais bonita e organizada.
