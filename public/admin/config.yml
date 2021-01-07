@@ -38,6 +38,7 @@ collections:
     folder: 'src/contents/posts/'
     slug: '{{slug}}'
     create: true
+    sortable_fields: ['title', 'publishDate']
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
