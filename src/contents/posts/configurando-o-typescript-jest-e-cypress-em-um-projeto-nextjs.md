@@ -1,5 +1,5 @@
 ---
-title: 'Configurando o Typescript, Jest e Cypress em um projeto NextJS'
+title: 'Next #06 - Instalando e configurando bibliotecas de testes - Jest e Cypress'
 author: Massaaki
 minToRead: 60
 level: Médio
@@ -7,8 +7,8 @@ stacks:
   - NextJs
   - Typescript
   - ReactJs
-thumbnail: /img/publications/list-de-bibliotecas-satisfacao-com-testes.png
-publishDate: 2020-11-30T02:16:34.010Z
+thumbnail: /img/publications/comecando-com-next-06.webp
+publishDate: 2021-01-07T23:15:34.010Z
 ---
 Uma boa prática, principalmente para projetos maiores é fazer testes para garantir os principais funcionamentos da plataforma.
 
@@ -16,9 +16,9 @@ O site [stateofjs](https://2019.stateofjs.com/pt/testing/) realizou uma pesquisa
 
 ![Lista de bibliotecas de testes ordenadas por satisfacao por desenvolvedores](/img/publications/list-de-bibliotecas-satisfacao-com-testes.png "lista de satisfacao de bibliotecas de testes")
 
-E para você que utiliza o NextJs, React( ou qualquer outro framework) com Typescript, pode ter passado alguns problemas para instalar o Jest com o Cypress, então ao final desta leitura você será capaz de configurar a sua aplicação(**NextJs**, com **Typescript** e **Eslint**) com as bibliotecas de test **Jest** e **Cypress** sem conflitos de tipagem.
+Ao configurar o Jest e o Cypress em um projeto Next com Typescript, podem acontecer problemas de compatibilidade na tipagem. Então hoje vamos seguir instalando essas duas bibliotecas.
 
-Antes de mais nada, inicie um projeto **Next**, instale e configure o **Typescript** e o **Eslint.**
+
 
 - - -
 
@@ -64,7 +64,7 @@ Caso você ainda não tenha, crie um arquivo .babelrc na raiz do projeto
 }
 ```
 
-Agora vamos importar o testing librar no Jest
+Agora vamos importar o testing library
 
 Crie uma pasta na raiz chamada .jest e crie um arquivo chamado setup.ts
 
@@ -159,7 +159,6 @@ Com isso, agora podemos extender o arquivo typescript e incluir as tipagens do c
   "exclude": ["../node_modules/cypress/**/*.js"]  
  
 }  
-
 ```
 
 Agora crie o seu primeiro teste com cypress, em nosso caso, vamos apenas fazer uma visita a url 'http://localhost:3000'. 
